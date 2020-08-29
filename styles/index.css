@@ -60,7 +60,7 @@ body {
     height: 100vh;
     pointer-events: none;
     position: fixed;
-    transition: all 1s ease-out;
+    transition: all 200ms ease-out;
     width: 100%;
     z-index: 2;
   }
@@ -174,6 +174,8 @@ body {
   .header .header-left .description .datos p {
     color: white;
     padding: 10px 0px 0px 0px;
+    font-size: 16px;
+    width: 98%;
   }
 }
 .header .header-left .description .datos .redes {
@@ -185,6 +187,11 @@ body {
   flex-wrap: wrap;
   justify-content: space-around;
 }
+@media screen and (max-width: 425px) {
+  .header .header-left .description .datos .redes {
+    padding: 5px 0px;
+  }
+}
 .header .header-left .description .datos .redes h4 {
   width: 100%;
   text-align: center;
@@ -195,7 +202,7 @@ body {
 @media screen and (max-width: 425px) {
   .header .header-left .description .datos .redes h4 {
     color: white;
-    padding: 5px 0px;
+    padding: 2px 0px;
   }
 }
 .header .header-left .description .datos .redes i {
