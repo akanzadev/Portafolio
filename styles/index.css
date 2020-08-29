@@ -159,6 +159,7 @@ body {
 }
 @media screen and (max-width: 425px) {
   .header .header-left .description .datos h1 {
+    padding: 10px 0px 5px 0px;
     color: white;
     font-size: 24px;
   }
@@ -173,7 +174,7 @@ body {
 @media screen and (max-width: 425px) {
   .header .header-left .description .datos p {
     color: white;
-    padding: 10px 0px 0px 0px;
+    padding: 5px 0px 0px 0px;
     font-size: 15px;
     width: 98%;
   }
