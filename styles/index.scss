@@ -140,7 +140,7 @@ body {
           color: $AzulLautado;
           @media screen and (max-width: 425px) {
             color: white;
-            font-size: 35px;
+            font-size: 24px;
           }
         }
         p {
@@ -152,7 +152,7 @@ body {
           @media screen and (max-width: 425px) {
             color: white;
             padding: 10px 0px 0px 0px;
-            font-size: 16px;
+            font-size: 15px;
             width: 98%;
           }
         }
@@ -215,7 +215,7 @@ body {
         width: 75%;
         border-radius: 20px;
         @media screen and (max-width: 425px) {
-          width: 90%;
+          width: 70%;
           border-radius: 10px;
         }
       }

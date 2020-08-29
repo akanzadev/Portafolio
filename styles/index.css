@@ -160,7 +160,7 @@ body {
 @media screen and (max-width: 425px) {
   .header .header-left .description .datos h1 {
     color: white;
-    font-size: 35px;
+    font-size: 24px;
   }
 }
 .header .header-left .description .datos p {
@@ -174,7 +174,7 @@ body {
   .header .header-left .description .datos p {
     color: white;
     padding: 10px 0px 0px 0px;
-    font-size: 16px;
+    font-size: 15px;
     width: 98%;
   }
 }
@@ -254,7 +254,7 @@ body {
 }
 @media screen and (max-width: 425px) {
   .header .header-right .description img {
-    width: 90%;
+    width: 70%;
     border-radius: 10px;
   }
 }
