@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 * {
   margin: 0px;
   padding: 0px;
@@ -6,7 +7,8 @@
 
 body {
   background-color: rgba(255, 255, 255, 0.897);
-  font-family: sans-serif;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
 }
 
 .container {
@@ -19,13 +21,13 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
 }
 .nav .nav-logo {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 40%;
+  width: 45%;
   align-items: center;
 }
 .nav .nav-logo span {
@@ -43,7 +45,7 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
   list-style: none;
-  width: 50%;
+  width: 45%;
   height: 100%;
   justify-content: space-around;
   align-items: center;
@@ -53,7 +55,7 @@ body {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    background-color: #5b78c7;
+    background-color: #243454;
     clip-path: circle(13.7% at 1% -10%);
     height: 100vh;
     pointer-events: none;
@@ -113,7 +115,7 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
 }
-.header .header-right {
+.header .header-left {
   width: 50%;
   height: 100%;
   background-color: #243454;
@@ -122,13 +124,90 @@ body {
   flex-wrap: wrap;
   justify-content: flex-end;
 }
-.header .header-right .description {
+@media screen and (max-width: 425px) {
+  .header .header-left {
+    order: 2;
+    width: 100%;
+    height: 50%;
+  }
+}
+.header .header-left .description {
   align-self: center;
   height: 90%;
   width: 90%;
   background-color: white;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
-.header .header-left {
+@media screen and (max-width: 425px) {
+  .header .header-left .description {
+    width: 100%;
+    height: 100%;
+    background-color: #243454;
+  }
+}
+.header .header-left .description .datos {
+  width: 100%;
+  align-self: center;
+  text-align: center;
+}
+.header .header-left .description .datos h1 {
+  font-size: 50px;
+  padding: 5px 0px;
+  color: #243454;
+}
+@media screen and (max-width: 425px) {
+  .header .header-left .description .datos h1 {
+    color: white;
+    font-size: 35px;
+  }
+}
+.header .header-left .description .datos p {
+  margin: auto;
+  width: 90%;
+  font-size: 18px;
+  padding: 20px 0px 0px 0px;
+  color: #243454;
+}
+@media screen and (max-width: 425px) {
+  .header .header-left .description .datos p {
+    color: white;
+    padding: 10px 0px 0px 0px;
+  }
+}
+.header .header-left .description .datos .redes {
+  padding: 10px 0px;
+  margin: auto;
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.header .header-left .description .datos .redes h4 {
+  width: 100%;
+  text-align: center;
+  padding: 15px 0px;
+  font-size: 20px;
+  color: #243454;
+}
+@media screen and (max-width: 425px) {
+  .header .header-left .description .datos .redes h4 {
+    color: white;
+    padding: 5px 0px;
+  }
+}
+.header .header-left .description .datos .redes i {
+  font-size: 40px;
+  color: #243454;
+}
+@media screen and (max-width: 425px) {
+  .header .header-left .description .datos .redes i {
+    color: white;
+  }
+}
+.header .header-right {
   height: 100%;
   width: 50%;
   background-color: white;
@@ -137,11 +216,40 @@ body {
   flex-wrap: wrap;
   justify-content: flex-start;
 }
-.header .header-left .description {
+@media screen and (max-width: 425px) {
+  .header .header-right {
+    order: 1;
+    width: 100%;
+    height: 50%;
+  }
+}
+.header .header-right .description {
   align-self: center;
   height: 90%;
   width: 90%;
   background-color: #243454;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 425px) {
+  .header .header-right .description {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+  }
+}
+.header .header-right .description img {
+  width: 75%;
+  border-radius: 20px;
+}
+@media screen and (max-width: 425px) {
+  .header .header-right .description img {
+    width: 90%;
+    border-radius: 10px;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */
