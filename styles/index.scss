@@ -38,7 +38,6 @@ body {
     span {
       color: $BlancoSuave;
       font-size: 25px;
-
       @media screen and (max-width: 425px) {
         font-size: 20px;
       }
@@ -59,6 +58,7 @@ body {
       @include flex(column);
       background-color: $AzulLautado;
       clip-path: circle(13.7% at 1% -10%);
+      -webkit-clip-path: circle(13.7% at 1% -10%);
       height: 100vh;
       pointer-events: none;
       position: fixed;
@@ -67,6 +67,7 @@ body {
       z-index: 2;
       &.open {
         clip-path: circle(1100px at 1% -10%);
+        -webkit-clip-path: circle(1100px at 1% -10%);
         pointer-events: all;
       }
       &.open a {

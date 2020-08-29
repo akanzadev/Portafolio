@@ -62,6 +62,7 @@ body {
     flex-wrap: wrap;
     background-color: #243454;
     clip-path: circle(13.7% at 1% -10%);
+    -webkit-clip-path: circle(13.7% at 1% -10%);
     height: 100vh;
     pointer-events: none;
     position: fixed;
@@ -71,6 +72,7 @@ body {
   }
   .nav .nav-links.open {
     clip-path: circle(1100px at 1% -10%);
+    -webkit-clip-path: circle(1100px at 1% -10%);
     pointer-events: all;
   }
   .nav .nav-links.open a {
