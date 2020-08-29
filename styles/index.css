@@ -34,6 +34,11 @@ body {
   color: rgba(255, 255, 255, 0.897);
   font-size: 25px;
 }
+@media screen and (max-width: 425px) {
+  .nav .nav-logo span {
+    font-size: 20px;
+  }
+}
 @media screen and (max-width: 768px) {
   .nav .nav-logo {
     width: 90%;
