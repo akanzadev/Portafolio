@@ -62,12 +62,12 @@ body {
       height: 100vh;
       pointer-events: none;
       position: fixed;
-      transition: all 600ms ease-out;
+      transition: all 100ms ease-out;
       width: 100%;
       z-index: 2;
       &.open {
-        clip-path: circle(1100px at -10% -10%);
-        -webkit-clip-path: circle(1100px at -10% -10%);
+        clip-path: circle(700px at -10% -10%);
+        -webkit-clip-path: circle(700px at -10% -10%);
         pointer-events: all;
       }
       &.open a {
@@ -84,7 +84,7 @@ body {
       border-bottom: 5px solid white;
       @media screen and (max-width: 768px) {
         opacity: 0;
-        transition: all 600ms;
+        transition: all 100ms;
         border: none;
       }
     }
