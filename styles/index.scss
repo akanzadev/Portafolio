@@ -57,17 +57,17 @@ body {
     @media screen and (max-width: 768px) {
       @include flex(column);
       background-color: $AzulLautado;
-      clip-path: circle(13.7% at 1% -10%);
-      -webkit-clip-path: circle(13.7% at 1% -10%);
+      clip-path: circle(13.7% at -10% -10%);
+      -webkit-clip-path: circle(13.7% at -10% -10%);
       height: 100vh;
       pointer-events: none;
       position: fixed;
-      transition: all 200ms ease-out;
+      transition: all 600ms ease-out;
       width: 100%;
       z-index: 2;
       &.open {
-        clip-path: circle(1100px at 1% -10%);
-        -webkit-clip-path: circle(1100px at 1% -10%);
+        clip-path: circle(1100px at -10% -10%);
+        -webkit-clip-path: circle(1100px at -10% -10%);
         pointer-events: all;
       }
       &.open a {
@@ -84,7 +84,7 @@ body {
       border-bottom: 5px solid white;
       @media screen and (max-width: 768px) {
         opacity: 0;
-        transition: all 2s;
+        transition: all 600ms;
         border: none;
       }
     }
