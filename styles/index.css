@@ -239,7 +239,7 @@ body {
 }
 @media screen and (max-width: 425px) {
   .header-left .description .datos .redes i {
-    padding: 10px;
+    padding: 10px 0px;
     color: white;
   }
 }
