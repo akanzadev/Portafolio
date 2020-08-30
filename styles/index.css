@@ -289,4 +289,61 @@ body {
   }
 }
 
+.main {
+  width: 100%;
+  background-image: linear-gradient(90deg, rgba(36, 52, 84, 0.9) 30%, rgba(36, 52, 84, 0.7) 40%, rgba(36, 52, 84, 0.9) 30%), url("../img/markus-spiske-AaEQmoufHLk-unsplash.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.main .main-contenido {
+  width: 90%;
+  margin: auto;
+}
+.main .main-contenido h3 {
+  padding: 40px 0px;
+  width: 100%;
+  font-size: 44px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.897);
+}
+.main .main-contenido .proyectos {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.main .main-contenido .proyectos .proyecto {
+  width: 30%;
+  transition: all 500ms;
+  opacity: 0.7;
+  position: relative;
+  overflow: hidden;
+}
+@media screen and (max-width: 425px) {
+  .main .main-contenido .proyectos .proyecto {
+    margin-top: 30px;
+    width: 100%;
+  }
+}
+.main .main-contenido .proyectos .proyecto::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(128, 128, 128, 0.5);
+  transform: translateY(0%);
+  transition: all 500ms;
+}
+.main .main-contenido .proyectos .proyecto img {
+  width: 100%;
+}
+.main .main-contenido .proyectos .proyecto:hover {
+  transform: scale(1.05);
+  opacity: 1;
+}
+.main .main-contenido .proyectos .proyecto:hover::before {
+  transform: translateY(-100%);
+}
+
 /*# sourceMappingURL=index.css.map */

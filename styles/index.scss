@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-$AzulLautado: rgb(36, 52, 84);
+$AzulLautado: #243454;
 $BlancoSuave: rgba(255, 255, 255, 0.897);
 $AzulIntenso: rgb(11, 24, 51);
 $CelesteSuave: rgb(91, 120, 199);
@@ -242,4 +242,60 @@ body {
   }
 }
 .main {
+  width: 100%;
+  background-image: linear-gradient(
+      90deg,
+      rgba(36, 52, 84, 0.9) 30%,
+      rgba(36, 52, 84, 0.7) 40%,
+      rgba(36, 52, 84, 0.9) 30%
+    ),
+    url("../img/markus-spiske-AaEQmoufHLk-unsplash.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  .main-contenido {
+    width: 90%;
+    margin: auto;
+    h3 {
+      padding: 40px 0px;
+      width: 100%;
+      font-size: 44px;
+      text-align: center;
+      color: $BlancoSuave;
+    }
+    .proyectos {
+      width: 100%;
+      @include flex(row);
+      justify-content: space-around;
+      .proyecto {
+        width: 30%;
+        transition: all 500ms;
+        opacity: 0.7;
+        position: relative;
+        overflow: hidden;
+        @media screen and (max-width: 425px) {
+          margin-top: 30px;
+          width: 100%;
+        }
+        &::before {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(128, 128, 128, 0.5);
+          transform: translateY(0%);
+          transition: all 500ms;
+        }
+        img {
+          width: 100%;
+        }
+        &:hover {
+          transform: scale(1.05);
+          opacity: 1;
+          &::before {
+            transform: translateY(-100%);
+          }
+        }
+      }
+    }
+  }
 }
