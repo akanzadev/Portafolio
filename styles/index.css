@@ -178,7 +178,7 @@ body {
   .header-left .description .datos h1 {
     padding: 10px 0px 5px 0px;
     color: white;
-    font-size: 29px;
+    font-size: 25px;
   }
 }
 .header-left .description .datos strong {
@@ -188,7 +188,7 @@ body {
 @media screen and (max-width: 425px) {
   .header-left .description .datos strong {
     color: white;
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 .header-left .description .datos p {
@@ -202,7 +202,7 @@ body {
   .header-left .description .datos p {
     color: white;
     padding: 5px 0px 0px 0px;
-    font-size: 15px;
+    font-size: 14px;
     width: 98%;
   }
 }
