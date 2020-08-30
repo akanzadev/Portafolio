@@ -23,81 +23,11 @@ body {
   flex-wrap: wrap;
   justify-content: center;
 }
-.nav .nav-logo {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 45%;
-  align-items: center;
-}
-.nav .nav-logo span {
-  color: rgba(255, 255, 255, 0.897);
-  font-size: 25px;
-}
-@media screen and (max-width: 425px) {
-  .nav .nav-logo span {
-    font-size: 20px;
-  }
-}
-@media screen and (max-width: 768px) {
-  .nav .nav-logo {
-    width: 90%;
-    margin: auto;
-  }
-}
-.nav .nav-links {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  list-style: none;
-  width: 45%;
-  height: 100%;
-  justify-content: space-around;
-  align-items: center;
-}
-@media screen and (max-width: 768px) {
-  .nav .nav-links {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    background-color: #243454;
-    clip-path: circle(13.7% at -10% -10%);
-    -webkit-clip-path: circle(13.7% at -10% -10%);
-    height: 100vh;
-    pointer-events: none;
-    position: fixed;
-    transition: all 100ms ease-out;
-    width: 100%;
-    z-index: 2;
-  }
-  .nav .nav-links.open {
-    clip-path: circle(700px at -10% -10%);
-    -webkit-clip-path: circle(700px at -10% -10%);
-    pointer-events: all;
-  }
-  .nav .nav-links.open a {
-    opacity: 1;
-  }
-}
-.nav .nav-links a {
-  color: white;
-  font-size: 18px;
-  text-decoration: none;
-  padding: 5px 10px;
-  border-left: 10px solid #243454;
-  border-right: 10px solid #243454;
-  border-bottom: 5px solid white;
-}
-@media screen and (max-width: 768px) {
-  .nav .nav-links a {
-    opacity: 0;
-    transition: all 100ms;
-    border: none;
-  }
-}
 @media screen and (max-width: 768px) {
   .nav {
-    position: relative;
+    width: 100%;
+    top: 0px;
+    position: fixed;
   }
   .nav .hamburger {
     position: absolute;
@@ -115,6 +45,80 @@ body {
   }
 }
 
+.nav-logo {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 45%;
+  align-items: center;
+}
+.nav-logo span {
+  color: rgba(255, 255, 255, 0.897);
+  font-size: 25px;
+}
+@media screen and (max-width: 425px) {
+  .nav-logo span {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .nav-logo {
+    width: 90%;
+    margin: auto;
+  }
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  list-style: none;
+  width: 45%;
+  height: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+@media screen and (max-width: 768px) {
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: #243454;
+    clip-path: circle(13.7% at -10% -10%);
+    -webkit-clip-path: circle(13.7% at -10% -10%);
+    height: 100vh;
+    pointer-events: none;
+    position: fixed;
+    transition: all 500ms ease-out;
+    width: 100%;
+    z-index: 2;
+  }
+  .nav-links.open {
+    clip-path: circle(1200px at -10% -10%);
+    -webkit-clip-path: circle(1200px at -10% -10%);
+    pointer-events: all;
+  }
+  .nav-links.open a {
+    opacity: 1;
+  }
+}
+.nav-links a {
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-left: 10px solid #243454;
+  border-right: 10px solid #243454;
+  border-bottom: 5px solid white;
+}
+@media screen and (max-width: 768px) {
+  .nav-links a {
+    opacity: 0;
+    transition: all 100ms;
+    border: none;
+  }
+}
+
 .header {
   width: 100%;
   height: 90vh;
@@ -122,7 +126,13 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
 }
-.header .header-left {
+@media screen and (max-width: 768px) {
+  .header {
+    margin-top: 10vh;
+  }
+}
+
+.header-left {
   width: 50%;
   height: 100%;
   background-color: #243454;
@@ -132,13 +142,13 @@ body {
   justify-content: flex-end;
 }
 @media screen and (max-width: 425px) {
-  .header .header-left {
+  .header-left {
     order: 2;
     width: 100%;
     height: 50%;
   }
 }
-.header .header-left .description {
+.header-left .description {
   align-self: center;
   height: 90%;
   width: 90%;
@@ -148,45 +158,55 @@ body {
   flex-wrap: wrap;
 }
 @media screen and (max-width: 425px) {
-  .header .header-left .description {
+  .header-left .description {
     width: 100%;
     height: 100%;
     background-color: #243454;
   }
 }
-.header .header-left .description .datos {
+.header-left .description .datos {
   width: 100%;
   align-self: center;
   text-align: center;
 }
-.header .header-left .description .datos h1 {
+.header-left .description .datos h1 {
   font-size: 50px;
   padding: 5px 0px;
+  color: #0b1833;
+}
+@media screen and (max-width: 425px) {
+  .header-left .description .datos h1 {
+    padding: 10px 0px 5px 0px;
+    color: white;
+    font-size: 29px;
+  }
+}
+.header-left .description .datos strong {
+  font-size: 20px;
   color: #243454;
 }
 @media screen and (max-width: 425px) {
-  .header .header-left .description .datos h1 {
-    padding: 10px 0px 5px 0px;
+  .header-left .description .datos strong {
     color: white;
-    font-size: 24px;
+    font-size: 18px;
   }
 }
-.header .header-left .description .datos p {
+.header-left .description .datos p {
   margin: auto;
   width: 90%;
   font-size: 18px;
   padding: 20px 0px 0px 0px;
-  color: #243454;
+  color: #0b1833;
 }
 @media screen and (max-width: 425px) {
-  .header .header-left .description .datos p {
+  .header-left .description .datos p {
     color: white;
     padding: 5px 0px 0px 0px;
     font-size: 15px;
     width: 98%;
   }
 }
-.header .header-left .description .datos .redes {
+.header-left .description .datos .redes {
   padding: 10px 0px;
   margin: auto;
   width: 60%;
@@ -196,11 +216,11 @@ body {
   justify-content: space-around;
 }
 @media screen and (max-width: 425px) {
-  .header .header-left .description .datos .redes {
+  .header-left .description .datos .redes {
     padding: 5px 0px;
   }
 }
-.header .header-left .description .datos .redes h4 {
+.header-left .description .datos .redes h4 {
   width: 100%;
   text-align: center;
   padding: 15px 0px;
@@ -208,21 +228,23 @@ body {
   color: #243454;
 }
 @media screen and (max-width: 425px) {
-  .header .header-left .description .datos .redes h4 {
+  .header-left .description .datos .redes h4 {
     color: white;
     padding: 2px 0px;
   }
 }
-.header .header-left .description .datos .redes i {
+.header-left .description .datos .redes i {
   font-size: 40px;
-  color: #243454;
+  color: #0b1833;
 }
 @media screen and (max-width: 425px) {
-  .header .header-left .description .datos .redes i {
+  .header-left .description .datos .redes i {
+    padding: 10px;
     color: white;
   }
 }
-.header .header-right {
+
+.header-right {
   height: 100%;
   width: 50%;
   background-color: white;
@@ -232,13 +254,13 @@ body {
   justify-content: flex-start;
 }
 @media screen and (max-width: 425px) {
-  .header .header-right {
+  .header-right {
     order: 1;
     width: 100%;
     height: 50%;
   }
 }
-.header .header-right .description {
+.header-right .description {
   align-self: center;
   height: 90%;
   width: 90%;
@@ -250,18 +272,18 @@ body {
   align-items: center;
 }
 @media screen and (max-width: 425px) {
-  .header .header-right .description {
+  .header-right .description {
     width: 100%;
     height: 100%;
     background-color: white;
   }
 }
-.header .header-right .description img {
+.header-right .description img {
   width: 75%;
   border-radius: 20px;
 }
 @media screen and (max-width: 425px) {
-  .header .header-right .description img {
+  .header-right .description img {
     width: 70%;
     border-radius: 10px;
   }
