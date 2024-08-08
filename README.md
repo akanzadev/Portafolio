@@ -1,9 +1,10 @@
 # Portafolio
 
-Este es mi humilde portafólio en el cual presente algunas cosas de mi, además de los proyectos en los que e participado como Fronted Developer.
+Este es mi portafolio personal, en el cual muestro mis proyectos y habilidades.
 
-# Tecnologías usadas en su realización
--HTML </br>
--CSS </br>
--SASS </br>
--JS </br>
+## Tecnologías usadas en su realización
+
+- HTML
+- CSS
+- SASS
+- JS
