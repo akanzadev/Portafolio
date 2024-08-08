@@ -6,13 +6,17 @@
 }
 
 body {
-  background-color: rgba(255, 255, 255, 0.897);
+  background-color: rgba(255, 255, 255, 0.8980392157);
   font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
 }
 
 .container {
   width: 100%;
+}
+
+.en {
+  display: none;
 }
 
 .nav {
@@ -41,7 +45,7 @@ body {
     width: 30px;
     height: 3px;
     background-color: white;
-    margin: 5px;
+    margin: 5px 0px;
   }
 }
 
@@ -53,7 +57,7 @@ body {
   align-items: center;
 }
 .nav-logo span {
-  color: rgba(255, 255, 255, 0.897);
+  color: rgba(255, 255, 255, 0.8980392157);
   font-size: 25px;
 }
 @media screen and (max-width: 425px) {
@@ -157,28 +161,47 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
 }
-@media screen and (max-width: 425px) {
-  .header-left .description {
-    width: 100%;
-    height: 100%;
-    background-color: #243454;
-  }
-}
 .header-left .description .datos {
   width: 100%;
   align-self: center;
   text-align: center;
 }
 .header-left .description .datos h1 {
-  font-size: 50px;
-  padding: 5px 0px;
-  color: #0b1833;
+  color: white;
+  font-size: 30px;
 }
-@media screen and (max-width: 425px) {
+@media screen and (min-width: 320px) {
   .header-left .description .datos h1 {
-    padding: 10px 0px 5px 0px;
-    color: white;
-    font-size: 25px;
+    padding: 10px 0px 10px 0px;
+  }
+}
+@media screen and (min-width: 375px) {
+  .header-left .description .datos h1 {
+    font-size: 35px;
+  }
+}
+@media screen and (min-width: 425px) {
+  .header-left .description .datos h1 {
+    font-size: 40px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .header-left .description .datos h1 {
+    font-size: 40px;
+    color: #0b1833;
+    padding: 5px 0px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .header-left .description .datos h1 {
+    font-size: 50px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .header-left .description .datos h1 {
+    font-size: 60px;
+    width: 80%;
+    margin: auto;
   }
 }
 .header-left .description .datos strong {
@@ -203,7 +226,7 @@ body {
     color: white;
     padding: 5px 0px 0px 0px;
     font-size: 14px;
-    width: 98%;
+    width: 90%;
   }
 }
 .header-left .description .datos .redes {
@@ -213,11 +236,11 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
 }
 @media screen and (max-width: 425px) {
   .header-left .description .datos .redes {
-    padding: 5px 0px;
+    width: 90%;
   }
 }
 .header-left .description .datos .redes h4 {
@@ -231,6 +254,7 @@ body {
   .header-left .description .datos .redes h4 {
     color: white;
     padding: 2px 0px;
+    font-size: 16px;
   }
 }
 .header-left .description .datos .redes i {
@@ -241,6 +265,13 @@ body {
   .header-left .description .datos .redes i {
     padding: 10px 0px;
     color: white;
+  }
+}
+@media screen and (max-width: 425px) {
+  .header-left .description {
+    width: 100%;
+    height: 100%;
+    background-color: #243454;
   }
 }
 
@@ -289,6 +320,91 @@ body {
   }
 }
 
+.modal {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 3;
+  display: none;
+}
+.modal .modal-content {
+  width: 50%;
+  max-width: 450px;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.modal .modal-content .modal-header h2 {
+  color: #0b1833;
+  font-size: 30px;
+  text-align: center;
+}
+@media screen and (max-width: 375px) {
+  .modal .modal-content .modal-header h2 {
+    font-size: 28px;
+  }
+}
+.modal .modal-content .modal-body {
+  text-align: center;
+  flex: 1;
+}
+.modal .modal-content .modal-body p {
+  color: #0b1833;
+  font-size: 20px;
+  text-align: center;
+}
+@media screen and (max-width: 375px) {
+  .modal .modal-content .modal-body p {
+    font-size: 18px;
+  }
+}
+.modal .modal-content .modal-body .modal-body_icon {
+  width: 250px;
+  height: 250px;
+}
+@media screen and (max-width: 768px) {
+  .modal .modal-content .modal-body .modal-body_icon {
+    width: 220px;
+    height: 220px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .modal .modal-content .modal-body .modal-body_icon {
+    width: 180px;
+    height: 180px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .modal .modal-content .modal-body .modal-body_icon {
+    width: 150px;
+    height: 150px;
+  }
+}
+.modal .modal-content .modal-body button {
+  padding: 10px 20px;
+  background-color: #0b1833;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+@media screen and (max-width: 768px) {
+  .modal .modal-content {
+    width: 80%;
+  }
+}
+
 .main {
   width: 100%;
   background-image: linear-gradient(90deg, rgba(36, 52, 84, 0.9) 30%, rgba(36, 52, 84, 0.7) 40%, rgba(36, 52, 84, 0.9) 30%), url("../img/markus-spiske-AaEQmoufHLk-unsplash.jpg");
@@ -304,7 +420,7 @@ body {
   width: 100%;
   font-size: 44px;
   text-align: center;
-  color: rgba(255, 255, 255, 0.897);
+  color: rgba(255, 255, 255, 0.8980392157);
 }
 .main .main-contenido .proyectos {
   width: 100%;

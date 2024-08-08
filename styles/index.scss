@@ -1,39 +1,51 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 $AzulLautado: #243454;
-$BlancoSuave: rgba(255, 255, 255, 0.897);
-$AzulIntenso: rgb(11, 24, 51);
+$BlancoSuave: #ffffffe5;
+$AzulIntenso: #0b1833;
 $CelesteSuave: rgb(91, 120, 199);
 $Fuente: "Poppins", sans-serif;
+
 @mixin flex($state) {
   display: flex;
   flex-direction: $state;
   flex-wrap: wrap;
 }
+
 @mixin reset() {
   margin: 0px;
   padding: 0px;
 }
+
 * {
   @include reset();
   box-sizing: border-box;
 }
+
 body {
   background-color: $BlancoSuave;
   font-family: $Fuente;
   scroll-behavior: smooth;
 }
+
 .container {
   width: 100%;
 }
+
+.en {
+  display: none;
+}
+
 .nav {
   height: 10vh;
   background-color: $AzulLautado;
   @include flex(row);
   justify-content: center;
+
   @media screen and (max-width: 768px) {
     width: 100%;
     top: 0px;
     position: fixed;
+
     .hamburger {
       position: absolute;
       cursor: pointer;
@@ -42,25 +54,30 @@ body {
       transform: translate(-5%, -50%);
       z-index: 3;
     }
+
     .line {
       width: 30px;
       height: 3px;
       background-color: white;
-      margin: 5px;
+      margin: 5px 0px;
     }
   }
 }
+
 .nav-logo {
   @include flex(row);
   width: 45%;
   align-items: center;
+
   span {
     color: $BlancoSuave;
     font-size: 25px;
+
     @media screen and (max-width: 425px) {
       font-size: 20px;
     }
   }
+
   @media screen and (max-width: 768px) {
     width: 90%;
     margin: auto;
@@ -74,6 +91,7 @@ body {
   height: 100%;
   justify-content: space-around;
   align-items: center;
+
   @media screen and (max-width: 768px) {
     @include flex(column);
     background-color: $AzulLautado;
@@ -85,15 +103,18 @@ body {
     transition: all 500ms ease-out;
     width: 100%;
     z-index: 2;
+
     &.open {
       clip-path: circle(1200px at -10% -10%);
       -webkit-clip-path: circle(1200px at -10% -10%);
       pointer-events: all;
     }
+
     &.open a {
       opacity: 1;
     }
   }
+
   a {
     color: white;
     font-size: 18px;
@@ -102,6 +123,7 @@ body {
     border-left: 10px solid $AzulLautado;
     border-right: 10px solid $AzulLautado;
     border-bottom: 5px solid white;
+
     @media screen and (max-width: 768px) {
       opacity: 0;
       transition: all 100ms;
@@ -109,10 +131,12 @@ body {
     }
   }
 }
+
 .header {
   width: 100%;
   height: 90vh;
   @include flex(row);
+
   @media screen and (max-width: 768px) {
     margin-top: 10vh;
   }
@@ -124,80 +148,114 @@ body {
   background-color: $AzulLautado;
   @include flex(row);
   justify-content: flex-end;
+
   @media screen and (max-width: 425px) {
     order: 2;
     width: 100%;
     height: 50%;
   }
+
   .description {
     align-self: center;
     height: 90%;
     width: 90%;
     background-color: white;
-    @media screen and (max-width: 425px) {
-      width: 100%;
-      height: 100%;
-      background-color: $AzulLautado;
-    }
+
     @include flex(row);
+
     .datos {
       width: 100%;
       align-self: center;
       text-align: center;
+
       h1 {
-        font-size: 50px;
-        padding: 5px 0px;
-        color: $AzulIntenso;
-        @media screen and (max-width: 425px) {
-          padding: 10px 0px 5px 0px;
-          color: white;
-          font-size: 25px;
+        color: white;
+        font-size: 30px;
+
+        @media screen and (min-width: 320px) {
+          padding: 10px 0px 10px 0px;
+        }
+
+        @media screen and (min-width: 375px) {
+          font-size: 35px;
+        }
+
+        @media screen and (min-width: 425px) {
+          font-size: 40px;
+        }
+
+        @media screen and (min-width: 768px) {
+          font-size: 40px;
+          color: $AzulIntenso;
+          padding: 5px 0px;
+        }
+
+        @media screen and (min-width: 1024px) {
+          font-size: 50px;
+        }
+
+        @media screen and (min-width: 1440px) {
+          font-size: 60px;
+          width: 80%;
+          margin: auto;
         }
       }
+
       strong {
         font-size: 20px;
         color: $AzulLautado;
+
         @media screen and (max-width: 425px) {
           color: white;
           font-size: 16px;
         }
       }
+
       p {
         margin: auto;
         width: 90%;
         font-size: 18px;
         padding: 20px 0px 0px 0px;
         color: $AzulIntenso;
+
         @media screen and (max-width: 425px) {
           color: white;
           padding: 5px 0px 0px 0px;
           font-size: 14px;
-          width: 98%;
+          width: 90%;
         }
       }
+
       .redes {
         padding: 10px 0px;
         margin: auto;
         width: 60%;
         @include flex(row);
-        justify-content: space-around;
+        // justify-content: space-around;
+        justify-content: center;
+
         @media screen and (max-width: 425px) {
-          padding: 5px 0px;
+          width: 90%;
         }
+
         h4 {
           width: 100%;
           text-align: center;
           padding: 15px 0px;
           font-size: 20px;
           color: $AzulLautado;
+
           @media screen and (max-width: 425px) {
             color: white;
             padding: 2px 0px;
+            font-size: 16px;
           }
         }
+
         i {
           font-size: 40px;
           color: $AzulIntenso;
+
           @media screen and (max-width: 425px) {
             padding: 10px 0px;
             color: white;
@@ -205,19 +263,28 @@ body {
         }
       }
     }
+
+    @media screen and (max-width: 425px) {
+      width: 100%;
+      height: 100%;
+      background-color: $AzulLautado;
+    }
   }
 }
+
 .header-right {
   height: 100%;
   width: 50%;
   background-color: white;
   @include flex(row);
   justify-content: flex-start;
+
   @media screen and (max-width: 425px) {
     order: 1;
     width: 100%;
     height: 50%;
   }
+
   .description {
     align-self: center;
     height: 90%;
@@ -226,14 +293,17 @@ body {
     @include flex(row);
     justify-content: center;
     align-items: center;
+
     @media screen and (max-width: 425px) {
       width: 100%;
       height: 100%;
       background-color: white;
     }
+
     img {
       width: 75%;
       border-radius: 20px;
+
       @media screen and (max-width: 425px) {
         width: 70%;
         border-radius: 10px;
@@ -241,6 +311,94 @@ body {
     }
   }
 }
+
+.modal {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 3;
+  display: none;
+
+  .modal-content {
+    width: 50%;
+    // height: 50%;
+    max-width: 450px;
+
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    padding: 20px;
+    @include flex(column);
+
+    .modal-header {
+      h2 {
+        color: $AzulIntenso;
+        font-size: 30px;
+        text-align: center;
+
+        @media screen and (max-width: 375px) {
+          font-size: 28px;
+        }
+      }
+    }
+
+    .modal-body {
+      text-align: center;
+      flex: 1;
+
+      p {
+        color: $AzulIntenso;
+        font-size: 20px;
+        text-align: center;
+
+        @media screen and (max-width: 375px) {
+          font-size: 18px;
+        }
+      }
+
+      .modal-body_icon {
+        width: 250px;
+        height: 250px;
+
+        @media screen and (max-width: 768px) {
+          width: 220px;
+          height: 220px;
+        }
+
+        @media screen and (max-width: 425px) {
+          width: 180px;
+          height: 180px;
+        }
+
+        @media screen and (max-width: 320px) {
+          width: 150px;
+          height: 150px;
+        }
+      }
+
+      button {
+        padding: 10px 20px;
+        background-color: $AzulIntenso;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        margin-top: 20px;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      width: 80%;
+    }
+  }
+}
+
 .main {
   width: 100%;
   background-image: linear-gradient(
@@ -252,9 +410,11 @@ body {
     url("../img/markus-spiske-AaEQmoufHLk-unsplash.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+
   .main-contenido {
     width: 90%;
     margin: auto;
+
     h3 {
       padding: 40px 0px;
       width: 100%;
@@ -262,20 +422,24 @@ body {
       text-align: center;
       color: $BlancoSuave;
     }
+
     .proyectos {
       width: 100%;
       @include flex(row);
       justify-content: space-around;
+
       .proyecto {
         width: 30%;
         transition: all 500ms;
         opacity: 0.7;
         position: relative;
         overflow: hidden;
+
         @media screen and (max-width: 425px) {
           margin-top: 30px;
           width: 100%;
         }
+
         &::before {
           content: "";
           position: absolute;
@@ -285,12 +449,15 @@ body {
           transform: translateY(0%);
           transition: all 500ms;
         }
+
         img {
           width: 100%;
         }
+
         &:hover {
           transform: scale(1.05);
           opacity: 1;
+
           &::before {
             transform: translateY(-100%);
           }
